@@ -57,39 +57,40 @@
  <p>
  <div>
  <div>
- <p><strong>Topic: Human Influences on the Water Cycle</strong></p>
- <p><strong>Goal: </strong>Analyze satellite observations of terrestrial water storage changes to investigate human and climate influences on regional water cycles, with a focus on groundwater depletion and drought impacts.</p>
- <p><strong>Datasets</strong>: <ul>
-   <li>Location: /home/jovyan/shared/NASA_Summer_School_2026/water_cycle/materials/data</li>
-   <li>GRACE/GRACE-FO Total Water Storage (TWS) data - Satellite gravimetry measurements of water mass changes</li>
-   <li>Gridded data: GRCTellus.JPL.200204_202603.GLO.RL06.3M.MSCNv04CRI.nc</li>
-   <li>Regional Analysis for California (CA):</li>
-   <ul>
-   <li>GRACEFO_TimeSeries_CA_2002_2026.csv - Time series of water storage anomalies</li>
-   <li>GRACEFO_RegCoef_CA.csv - Regional regression coefficients</li>
-   <li>GRACEFO_RegResid_CA.csv - Regional residuals</li>
-   </ul>
-   </ul>
- </p>
- <p><strong>Scripts and Notebooks</strong>: <ul>
-   <li>Location: /home/jovyan/shared/NASA_Summer_School_2026/water_cycle/materials</li>
-   <li>GRACE_Extract_TS.ipynb - Extract time series from GRACE data</li>
-   <li>GRACE_Map_TWS.ipynb - Visualize water storage changes spatially</li>
-   <li>GRACE_NB1_GPTrend_Example.ipynb - Gaussian Process regression for trend analysis</li>
-   <li>GRACE_NB2_GPFit_torch.ipynb - Fit Gaussian Process models to water cycle data</li>
-   <li>GRACE_NB3_GPPredict_torch.ipynb - Make predictions using GP models</li>
-   <li>GRACE_NB4_Bootstrap_torch.ipynb - Uncertainty quantification via bootstrap methods</li>
-   <li>Supporting files: h2oenv (environment), ExpCov_SimField.png (example output)</li>
-   </ul>
- </p>
- <p><strong>Geographic Focus</strong>: California and global water storage patterns</p>
- <p><strong>Questions:</strong><ol>
-   <li>How have terrestrial water storage changes varied over time, and what do these changes reveal about groundwater depletion and drought?</li>
-   <li>Can satellite gravimetry data be used to detect anthropogenic water use (e.g., irrigation, groundwater pumping) at regional scales?</li>
-   <li>How do human influences on water storage compare with natural climate variability?</li>
-   <li>What are the trends and seasonal cycles in regional water storage, and how have they changed over the satellite observation period?</li>
-   <li>How can uncertainty quantification methods improve our understanding of water cycle changes?</li>
-   </ol></p>
+ <p><strong>Topic: Spatio-Temporal Variability of the Water Cycle</strong></p>
+ <p><strong>Goal:</strong> Gain familiarity with analysis tools for estimating long-term trends and seasonal variability in NASA's multi-decade terrestrial hydrology products</p>
+ <p><strong>Introduction:</strong> Continuous monitoring of the water cycle is critical for understanding many interconnected processes within the climate system. In recent decades, remote sensing has emerged as a critical observing technology to complement in situ observations of the terrestrial water cycle. NASA's Gravity Recovery and Climate Experiment (GRACE) and follow-on (GRACE-FO) missions provide an extended global data record of water cycle perturbations at regional and seasonal scales. This project will introduce tools for decomposing trends and seasonal cycles in water cycle dynamics using the missions' combined data record.</p>
+ <p><strong>Datasets:</strong></p>
+ <ul>
+   <li>GRACE/GRACE-FO global total water storage anomalies (TWSA)</li>
+   <li>Location: /home/jovyan/shared/NASA_Summer_School_2026/water_cycle/materials/data/GRCTellus.JPL.200204_202603.GLO.RL06.3M.MSCNv04CRI.nc</li>
+   <li>Example TWSA time series over central California</li>
+   <li>Location: /home/jovyan/shared/NASA_Summer_School_2026/water_cycle/materials/data/GRACEFO_TimeSeries_CA_2002_2026.csv</li>
+ </ul>
+ <p><strong>Demo Scripts:</strong></p>
+ <ul>
+   <li>GRACE_NB1_GPTrend_Example.ipynb: Estimating trend and seasonal cycle for GRACE/GRACE-FO time series</li>
+   <li>GRACE_NB2_GPFit_torch.ipynb: Fit Gaussian process (GP) models to residuals</li>
+   <li>GRACE_NB3_GPPredict_torch.ipynb: Explore correlation structure for GP fit and make predictions for chosen time points</li>
+   <li>GRACE_NB4_Bootstrap_torch.ipynb: Example bootstrap procedure for trend and seasonal amplitude</li>
+ </ul>
+ <p><strong>Supporting Scripts:</strong></p>
+ <ul>
+   <li>GRACE_Map_TWS.ipynb: Extract and map TWSA for selected region</li>
+   <li>GRACE_Extract_TS.ipynb: Extract and save a TWSA time series for selected location</li>
+ </ul>
+ <p><strong>Questions:</strong></p>
+ <p><strong>Regional analysis</strong></p>
+ <ul>
+   <li>Is a common seasonal cycle/trend sufficient for nearby locations within a region?</li>
+   <li>How can spatial correlation of residuals be evaluated?</li>
+ </ul>
+ <p><strong>Contrast across regions/continents</strong></p>
+ <ul>
+   <li>Are temporal correlation length scales different across regions?</li>
+   <li>What does that suggest about hydrologic processes in these areas?</li>
+   <li>Which areas have the most substantial long-term trends?</li>
+ </ul>
  <p><strong>Contact Scientist:&nbsp;</strong><strong>Jon Hobbs (</strong><a href="mailto:jonathan.m.hobbs@jpl.nasa.gov" target="_blank"><strong>jonathan.m.hobbs@jpl.nasa.gov</strong></a><strong>)</strong></p>
  <p><strong>Project Server (CMDA):&nbsp;</strong><a href="https://hub.jpl-cmda.org/" target="_blank"><strong>https://hub.jpl-cmda.org</strong></a></p>
  <div>
