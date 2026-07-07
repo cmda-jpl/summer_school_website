@@ -1,0 +1,9 @@
+ ! NOAA/PMEL TMAP
+ ! PyFerret v7.63 (optimized)
+ ! Linux 4.15.0-1096-azure - 10/13/20
+ ! 27-Jul-22 14:22     
+
+set mode verify
+use coads_climatology
+show data
+save/file="temp9.nc" slp sst

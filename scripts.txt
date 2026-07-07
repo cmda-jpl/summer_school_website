@@ -1,0 +1,38 @@
+(notebook) jovyan@jupyter-goodman:~$ ls /home/jovyan/shared/NASA_Summer_School_2026/*/materials/
+/home/jovyan/shared/NASA_Summer_School_2026/global_warming/materials/:
+0_Project_Intro.ipynb     1b_meet_data_Argo.ipynb             1d_meet_data_grace_lwe.ipynb  3_Ocean_Heat_Uptake.ipynb         5_Sea_level_budget.ipynb   data
+1a_meet_data_CERES.ipynb  1c_meet_data_sea_level-fixed.ipynb  2_TOA_energy_imbalance.ipynb  4_Ocean_Heat_Uptake_vs_TOA.ipynb  6_Regional_Patterns.ipynb
+
+/home/jovyan/shared/NASA_Summer_School_2026/marine_co2/materials/:
+data  model_v1.py  plot_rapid_mcdr_transect.ipynb  plots  __pycache__  run_rapid_mcdr_transect.ipynb
+
+/home/jovyan/shared/NASA_Summer_School_2026/SWOT_oceanography/materials/:
+
+/home/jovyan/shared/NASA_Summer_School_2026/tree_mortality/materials/:
+'1 - Comparing Gridded and Random Folds.ipynb'  '2 - Regression Model Comparison.ipynb'  '3 - Exploring Spatial Biases.ipynb'  '4 - Generating Mortality Projections.ipynb'   data
+
+/home/jovyan/shared/NASA_Summer_School_2026/water_cycle/materials/:
+data                 GRACE_Extract_TS.ipynb  GRACE_NB1_GPTrend_Example.ipynb  GRACE_NB3_GPPredict_torch.ipynb  h2oenv
+ExpCov_SimField.png  GRACE_Map_TWS.ipynb     GRACE_NB2_GPFit_torch.ipynb      GRACE_NB4_Bootstrap_torch.ipynb  README.md
+
+/home/jovyan/shared/NASA_Summer_School_2026/wildfires/materials/:
+'Background and Resources'   Data
+(notebook) jovyan@jupyter-goodman:~$ ls /home/jovyan/shared/NASA_Summer_School_2026/*/materials/
+/home/jovyan/shared/NASA_Summer_School_2026/global_warming/materials/:
+0_Project_Intro.ipynb     1b_meet_data_Argo.ipynb             1d_meet_data_grace_lwe.ipynb  3_Ocean_Heat_Uptake.ipynb         5_Sea_level_budget.ipynb   data
+1a_meet_data_CERES.ipynb  1c_meet_data_sea_level-fixed.ipynb  2_TOA_energy_imbalance.ipynb  4_Ocean_Heat_Uptake_vs_TOA.ipynb  6_Regional_Patterns.ipynb
+
+/home/jovyan/shared/NASA_Summer_School_2026/marine_co2/materials/:
+data  model_v1.py  plot_rapid_mcdr_transect.ipynb  plots  __pycache__  run_rapid_mcdr_transect.ipynb
+
+/home/jovyan/shared/NASA_Summer_School_2026/SWOT_oceanography/materials/:
+
+/home/jovyan/shared/NASA_Summer_School_2026/tree_mortality/materials/:
+'1 - Comparing Gridded and Random Folds.ipynb'  '2 - Regression Model Comparison.ipynb'  '3 - Exploring Spatial Biases.ipynb'  '4 - Generating Mortality Projections.ipynb'   data
+
+/home/jovyan/shared/NASA_Summer_School_2026/water_cycle/materials/:
+data                 GRACE_Extract_TS.ipynb  GRACE_NB1_GPTrend_Example.ipynb  GRACE_NB3_GPPredict_torch.ipynb  h2oenv
+ExpCov_SimField.png  GRACE_Map_TWS.ipynb     GRACE_NB2_GPFit_torch.ipynb      GRACE_NB4_Bootstrap_torch.ipynb  README.md
+
+/home/jovyan/shared/NASA_Summer_School_2026/wildfires/materials/:
+'Background and Resources'   Data

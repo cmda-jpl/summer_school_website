@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Marine Carbon</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="/assets/stylesheets/materialize.css">
+ <link rel="stylesheet" href="/assets/stylesheets/custom.css">
+ <link rel="stylesheet" media="screen" href="/assets/stylesheets/main.css">
+ <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+ <link href="/assets/stylesheets/style.css" rel="stylesheet">
+ <link rel="stylesheet" href="/assets/stylesheets/livefitler.css">
+ <link rel="stylesheet" href="/assets/stylesheets/custom_recommend.css">
+ <link rel="stylesheet" href="/assets/stylesheets/detail.css">
+ <link rel="stylesheet" href="/assets/stylesheets/chatbox-materialize.css">
+    <style>
+        tr {
+            border-bottom: none;
+        }
+
+        td {
+            text-align: center;
+        }
+        p {
+            font-size: 22px;
+            margin-bottom: 5px;
+            margin-left: 20px;
+        }
+        li {
+            font-size: 22px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+ <header>
+ <div>
+ <nav style='background: url("/assets/images/starfield-banner-blue.jpg") repeat;
+ margin-bottom: 20px;'>
+ <h4 style='box-sizing: inherit; font-weight: 400; line-height: 37.62px; font-size: 2.28rem; margin: 1.52rem 0px 0.912rem; margin-left: 20px; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left;'>NASA Summer School Group Project:
+</h4>
+ <h4 style='box-sizing: inherit; font-weight: 400; line-height: 30px; font-size: 2rem; margin: 1.52rem 0px 0.912rem; margin-left: 20px; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left;'>Marine Carbon Dioxide Removal 
+</h4>
+<div>
+ <div>
+ <h5 style='box-sizing: inherit; font-weight: 400; line-height: 18.975px; font-size: 1.15rem; margin-left: 20px; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;'></h5><img width="70%" src="topic_marine_co2.png">
+ <div>
+ <div>
+ <p>
+ </div>
+ </div><a class="btn waves-effect waves-light blue darken-3" href="topic_marine_co2.pdf" target="_blank"  style="box-sizing: inherit; background-color: rgb(21, 101, 192) !important; color: rgb(255, 255, 255); text-decoration: none; -webkit-tap-highlight-color: transparent; box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px, rgba(0, 0, 0, 0.2) 0px 1px 5px 0px; border: none; border-radius: 2px; display: inline-block; height: 36px; line-height: 36px; padding: 0px 16px; text-transform: uppercase; vertical-align: middle; font-size: 14px; outline: 0px; text-align: center; letter-spacing: 0.5px; transition: all 0.3s ease-out 0s; cursor: pointer; position: relative; overflow: hidden; user-select: none; z-index: 1; margin-left: 20px">DOWNLOAD PROJECT PDF</a>
+ <p>
+ </div>
+ </div>
+ <p>
+ <div>
+ <div>
+ <p><strong>Topic: The Role of Marine Carbon Dioxide Removal in Addressing Climate Change </strong></p>
+ <p><strong>Goal: </strong>Simulate the efficiency of Ocean Alkalinity Enhancement (OAE) in the Pacific Ocean and investigate the OAE efficiency varies regionally and seasonally and  how different ocean processes impact the OAE efficiency. </p>
+ <p><strong>Motivation:</strong><ul>
+   <li>The carbon emission reduction alone will not be enough to keep global temperature below dangerous levels (1.5 Celsius with respect to pre-industrial levels).</li>
+   <li>PA middle of the road scenario for keeping global warming below 1.5 Celsius requires capture of >400 Gt of carbon dioxide by 2100.</li>
+   <li>Several carbon removal approaches exist: (1) direct crabon capture, (2) cloud whitening, (3) aerosol injection, (4) nature-based approaches, etc.</li>
+   <li>Marine Carbon Dioxide Removal (mCDR) is a nature-based approach. mCDR targets and accelerates natural sequestration processes and does not compete for space for other land uses. 
+   </ul>
+   </p>
+ <p><strong>Datasets</strong>: <ul>
+   <li>Location: /home/jovyan/shared/NASA_Summer_School/marine_co2/data/</li>
+   <li>Forcing data for rapid-mCDR model simulation: rapid_mcdr_inputs</li>
+   <li>Results of rapid-mCDR for 3 different OAE deployment approaches: rapid_mcdr_outputs</li> 
+   </ul>
+ </p>
+  <p><strong>Scripts</strong>: <ul>
+   <li>Location: /home/jovyan/shared/NASA_Summer_School/marine_co2/</li>
+   <li>model_v1.py: rapid-mCDR model</li>
+   <li>run_rapid_mcdr_transect.ipynb: reads the forcing files, design OAE experiments and run rapid-mCDR model. 
+   <li>plot_rapid_mcdr_transect.ipynb: reads the results of rapid-mCDR and make sample plots. </li>
+   </ul>
+ </p>
+ <p><strong>Geographic focus</strong>: A transect in the Pacific Ocean</p>
+ <p><strong>Questions:</strong><ol>
+   <li>What regions are associated with the highest OAE efficiency (most CO2 removed from the atmosphere per unit of Alk added to the surface ocean)?</li>
+   <li>How fast is CO2 removed from the atmosphere after OAE deployment?</li>
+   <li>How does the OAE efficiency change with the season of OAE deployment?</li>
+   <li>How do different ocean processes impact OE efficiency?</li>
+   </ol></p>
+ <p><strong>Topic Scientist:&nbsp;</strong>
+ <strong>Dr. Kay Suselj</strong> (<a href="mailto:Kay.Suselj@jpl.nasa.gov" target="_blank"><strong>Kay.Suselj@jpl.nasa.gov</strong>)</a>
+<p>
+ <p><strong>Project Server (CMDA):&nbsp;</strong><a href="https://hub.jpl-cmda.org/" target="_blank"><strong>https://hub.jpl-cmda.org</strong></a></p>
+ <div>
+ <div contenteditable="false" data-gramm="false">
+
+</html>

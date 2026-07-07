@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Ecological Forecasting of Tree Mortality</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="/assets/stylesheets/materialize.css">
+ <link rel="stylesheet" href="/assets/stylesheets/custom.css">
+ <link rel="stylesheet" media="screen" href="/assets/stylesheets/main.css">
+ <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+ <link href="/assets/stylesheets/style.css" rel="stylesheet">
+ <link rel="stylesheet" href="/assets/stylesheets/livefitler.css">
+ <link rel="stylesheet" href="/assets/stylesheets/custom_recommend.css">
+ <link rel="stylesheet" href="/assets/stylesheets/detail.css">
+ <link rel="stylesheet" href="/assets/stylesheets/chatbox-materialize.css">
+    <style>
+        tr {
+            border-bottom: none;
+        }
+
+        td {
+            text-align: center;
+        }
+        p {
+            font-size: 22px;
+            margin-bottom: 5px;
+            margin-left: 20px;
+        }
+        li {
+            margin-left: 20px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+ <header>
+ <div>
+ <nav style='background: url("/assets/images/starfield-banner-blue.jpg") repeat;
+ margin-bottom: 20px;'>
+ <h4 style='box-sizing: inherit; font-weight: 400; line-height: 37.62px; font-size: 2.28rem; margin: 1.52rem 0px 0.912rem; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left;'>NASA Summer School:</h4>
+ <h4 style='box-sizing: inherit; font-weight: 400; line-height: 25px; font-size: 2rem; margin: 1.52rem 0px 0.912rem; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left;'>Ecological Forecasting of Tree Mortality</h4>
+</h4>
+<br>
+ <div>
+ <div>
+<p>
+<img width="60%" src="topic_tree_mortality.png">
+ <div>
+ <div>
+ <p>
+ </div>
+ </div><a class="btn waves-effect waves-light blue darken-3" href="topic_tree_mortality.pdf" target="_blank" style="box-sizing: inherit; background-color: rgb(21, 101, 192) !important; color: rgb(255, 255, 255); text-decoration: none; -webkit-tap-highlight-color: transparent; box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px, rgba(0, 0, 0, 0.2) 0px 1px 5px 0px; border: none; border-radius: 2px; display: inline-block; height: 36px; line-height: 36px; padding: 0px 16px; text-transform: uppercase; vertical-align: middle; font-size: 14px; outline: 0px; text-align: center; letter-spacing: 0.5px; transition: all 0.3s ease-out 0s; cursor: pointer; position: relative; overflow: hidden; user-select: none; z-index: 1; margin-left: 20px;">DOWNLOAD PROJECT PDF</a>
+ <p>
+ </div>
+ </div>
+ <p>
+ <div>
+ <div>
+ <p><strong>Topic: Modeling Tree Mortality in California’s Sierra Nevada</strong></p>
+ <p><strong>Goal: </strong>Model how droughts and other historical climate conditions contribute to observed conifer tree mortality in the Sierra Nevada Mountains</p>
+<!-- <p><strong>Background:</strong> -->
+ </p>
+ <p><strong>Datasets</strong>:  <ul>
+   <li>Location: /home/jovyan/shared/NASA_Summer_School_2026/tree_mortality/materials/data</li>
+   <li>Pre-generated, gridded drought indexes and tree mortality values</li>
+   <li>Mortality (United States Forest Service)</li><ul>
+<li>TPA (Trees per Acre)</li>
+   </ul>
+   <li>Drought Indexes (Basin Climate Model v8):
+</li> <ul>
+<li>PR (Cumulative Precipitation)</li>
+<li>SPI (Cumulative Precipitation, Standardized)</li>
+<li>PR-ET (Cumulative Water Balance)</li>
+<li>SPEI (Cumulative Water Balance, Standardized)</li>
+   </ul>
+   <li>Data Files:</li> <ul>
+<li>tree_mortality_gridded_training.nc4</li>
+<li>tree_mortality_gridded_folds.nc4</li>
+<li>tree_mortality_gridded_training_nonzero.nc4</li>
+<li>tree_mortality_random_training.nc4</li>
+<li>tree_mortality_random_folds.nc4</li>
+<li>tree_mortality_random_training_nonzero.nc4</li>
+<li>tree_mortality_training.nc4</li>
+<li>topo_indexes.nc4</li>
+   </ul>
+   <li>Geometry and Projections</li> <ul>
+<li>geometry/ - spatial boundary files</li>
+<li>projections/ - projected mortality data</li>
+   </ul>
+   </ul>
+
+<p><strong>Scripts and Notebooks</strong>: <ul>
+   <li>Location: /home/jovyan/shared/NASA_Summer_School_2026/tree_mortality/materials</li>
+   <li>1 - Comparing Gridded and Random Folds.ipynb</li>
+   <li>2 - Regression Model Comparison.ipynb</li>
+   <li>3 - Exploring Spatial Biases.ipynb</li>
+   <li>4 - Generating Mortality Projections.ipynb</li>
+</ul>
+</p>
+
+ <p><strong>Questions:</strong><ol>
+<li>Given the comparison between the results using two different ways of splitting data into folds, reflect on the following questions:</li><ol>
+   <li>Do you observe a difference between the mean squared error (MSE) of the two approaches? Which approach performs better? Is the difference statistically significant at an α = 0.05 significance level (i.e., is the p-value less than 0.05)? Is the difference consistent across multiple years?
+</li>
+ <li>A key assumption made by statistical machine learning models that the training and test sets are statistically independent and identically distributed. If this assumption is violated (e.g., if examples in the training and testing set are correlated, or if the training and testing sets are drawn from different underlying probability distributions), then performance of the model on the test set may not be reflective of the ability of the model to generalize to new, independently sampled data. What might cause the assumption of independent to be violated in this case, and how might it affect each approach for splitting data into folds? If the assumption is violated, is it more likely to lead to over-estimates or under-estimates of the ability of the model to generalize?
+</li>
+   <li>Given the considerations above, is there a recommended approach to use for model evaluation for this particular problem?
+</li>
+   </ol>
+   <li>Using the provided code as an example, implement and evaluate at least 3 different regression models from scikit-learn, and at least 1 additional "baseline" model (e.g., simple linear regression). Which models exhibit the most success in predicting mortality in the held-out year?</li><ol>
+   <li>What factors might explain the difference in model performance across years?
+</li>
+   <li>There is a phenomenon in statistical machine learning called the "bias-variance tradeoff", in which more complex models are better able to fit arbitrary relationships between the input variables and target values (i.e., they exhibit less "bias" towards a particular, for example linear, relationship), but this also leads to more "variance" in performance due to over-fitting to the particular random sample of data in the training set. Some models have parameters that control the complexity of the relationships that can be learned, such as the “max_depth” parameter of the random forest. Do you observe a bias-variance tradeoff as you explore different models and parameters for this problem? Provide some examples of instances where you observe the effect and how you mitigated it.
+</li>
+   </ol>
+   <li>Exploring Spatial Biases in Predictions</li>
+   <ol>
+     <li>Do you observe any spatial bias in prediction errors?</li>
+     <li>If so, does the degree or pattern of bias change with model type and parameterization?
+</li>
+     <li>Does the pattern of bias change across years?
+</li>
+     <li>What factors might induce spatial bias in this dataset? How can these be mitigated?</li>
+   </ol>
+</ol></p>
+ <p><strong>Contact Scientist:&nbsp;</strong> <ul>
+   <li><strong>Dr. Antonio Ferraz (</strong><a href="mailto:antonio.a.ferraz@jpl.nasa.gov" target="_blank"><strong>antonio.a.ferraz@jpl.nasa.gov</strong></a><strong>)</strong></p></li>
+   <li><strong>Dr. Gary Doran (</strong><a href="mailto:gary.b.doran.jr@jpl.nasa.gov" target="_blank"><strong>gary.b.doran.jr@jpl.nasa.gov</strong></a><strong>)</strong></p></li>
+   </ul>
+<p>
+ <p><strong>Data Access and Analysis Server:&nbsp;</strong><a href="https://jpl-cmda.org/" target="_blank"><strong>https://jpl-cmda.org</strong></a></p>
+
+   
+<div>
+ <div contenteditable="false" data-gramm="false">
+ </div>
+ </div>
+ </div>
+ </nav>
+ </div>
+ </header>
+ <div style='box-sizing: inherit; margin-left: -0.75rem; margin-right: -0.75rem; margin-bottom: 20px; color: rgba(0, 0, 0, 0.87); font-family: AmazonEmberLight, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+ <div>
+ </div>
+</body>
+</html>
