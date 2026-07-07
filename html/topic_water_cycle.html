@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Water Cycle</title>
+ <title>Human Influences on the Water Cycle</title>
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,11 +41,11 @@
  margin-bottom: 20px;'>
  <h4 style='box-sizing: inherit; font-weight: 400; line-height: 37.62px; font-size: 2.28rem; margin: 1.52rem 0px 0.912rem; margin-left: 20px; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left;'>NASA Summer School Group Project:
 </h4>
- <h4 style='box-sizing: inherit; font-weight: 400; line-height: 30px; font-size: 2rem; margin: 1.52rem 0px 0.912rem; margin-left: 20px; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left;'>Human Infulences on the Water Cycle
+ <h4 style='box-sizing: inherit; font-weight: 400; line-height: 30px; font-size: 2rem; margin: 1.52rem 0px 0.912rem; margin-left: 20px; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left;'>Human Influences on the Water Cycle
 </h4>
 <div>
  <div>
- <h5 style='box-sizing: inherit; font-weight: 400; line-height: 18.975px; font-size: 1.15rem; margin-left: 20px; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;'></h5><img width="40%" src="topic_water_cycle.png">
+ <h5 style='box-sizing: inherit; font-weight: 400; line-height: 18.975px; font-size: 1.15rem; margin-left: 20px; font-family: AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;'></h5>
  <div>
  <div>
  <p>
@@ -57,34 +57,41 @@
  <p>
  <div>
  <div>
- <p><strong>Topic: Observing Human Infuences on the Water Cycle from SWOT Data </strong></p>
- <p><strong>Goal: </strong>Study and compare reservoir and lake elevation change in the Mississippi River Basin and plot river profiles in a heavily controlled section of the river to observe human influence on the water cycle using Surface Water and Ocean Topography (SWOT) Data. </p>
-
+ <p><strong>Topic: Human Influences on the Water Cycle</strong></p>
+ <p><strong>Goal: </strong>Analyze satellite observations of terrestrial water storage changes to investigate human and climate influences on regional water cycles, with a focus on groundwater depletion and drought impacts.</p>
  <p><strong>Datasets</strong>: <ul>
-   <li>Location: /home/jovyan/shared/NASA_Summer_School_2024/swot/materials/data_downloads</li>
-   <li>SWOT lakes - SWOT_L2_HR_LakeSP_2.0</li>
-   <li>SWOT rivers - SWOT_L2_HR_RiverSP_2.0</li>
+   <li>Location: /home/jovyan/shared/NASA_Summer_School_2026/water_cycle/materials/data</li>
+   <li>GRACE/GRACE-FO Total Water Storage (TWS) data - Satellite gravimetry measurements of water mass changes</li>
+   <li>Gridded data: GRCTellus.JPL.200204_202603.GLO.RL06.3M.MSCNv04CRI.nc</li>
+   <li>Regional Analysis for California (CA):</li>
+   <ul>
+   <li>GRACEFO_TimeSeries_CA_2002_2026.csv - Time series of water storage anomalies</li>
+   <li>GRACEFO_RegCoef_CA.csv - Regional regression coefficients</li>
+   <li>GRACEFO_RegResid_CA.csv - Regional residuals</li>
+   </ul>
    </ul>
  </p>
-  <p><strong>Scripts</strong>: <ul>
-   <li>Location: /home/jovyan/shared/NASA_Summer_School_2024/swot/materials</li>
-   <li>Topic_SWOT.ipynb</li>
+ <p><strong>Scripts and Notebooks</strong>: <ul>
+   <li>Location: /home/jovyan/shared/NASA_Summer_School_2026/water_cycle/materials</li>
+   <li>GRACE_Extract_TS.ipynb - Extract time series from GRACE data</li>
+   <li>GRACE_Map_TWS.ipynb - Visualize water storage changes spatially</li>
+   <li>GRACE_NB1_GPTrend_Example.ipynb - Gaussian Process regression for trend analysis</li>
+   <li>GRACE_NB2_GPFit_torch.ipynb - Fit Gaussian Process models to water cycle data</li>
+   <li>GRACE_NB3_GPPredict_torch.ipynb - Make predictions using GP models</li>
+   <li>GRACE_NB4_Bootstrap_torch.ipynb - Uncertainty quantification via bootstrap methods</li>
+   <li>Supporting files: h2oenv (environment), ExpCov_SimField.png (example output)</li>
    </ul>
  </p>
- <p><strong>Geographic foci</strong>: Mississippi River Basin</p>
+ <p><strong>Geographic Focus</strong>: California and global water storage patterns</p>
  <p><strong>Questions:</strong><ol>
-   <li>Often in heavily managed rivers, locks and dams are prevalent, influencing river flow and water surface elevation (WSE). Plot a river profile of WSE over a specified portion of the Mississippi River. Can you pinpoint the location of the dams and locks based on the water surface elevation profiles? How would we expect the longitudinal profile to look without these dams or locks?</li>
-   <li>The Mississippi River Basin has many man made reservoirs and natural lakes. Here, we'll compare water surface elevation variability from a reservoir (Willow Reservoir, SWOT ID: 7421108633) and a lake (Fence Lake, SWOT ID: 7421110322) in Wisconsin. SWOT observes reservoirs and lakes > 250 m x 250 m currently over the released observable record (July 2023 - present day). How do the water levels change over time and compare to each other? Do your findings concur with this study that used ICESat-2 data? <a href="https://www.nature.com/articles/s41586-021-03262-3" target="_blank">https://www.nature.com/articles/s41586-021-03262-3</a></li>
-   <li>3.	Even if there are no reservoirs, dams or locks along a stretch of river, what other avenues can you see humans influencing the flow of surface water? How about the water cycle in general? What other NASA datasets could be useful for analyzing human influence on the water cycle?</li>
+   <li>How have terrestrial water storage changes varied over time, and what do these changes reveal about groundwater depletion and drought?</li>
+   <li>Can satellite gravimetry data be used to detect anthropogenic water use (e.g., irrigation, groundwater pumping) at regional scales?</li>
+   <li>How do human influences on water storage compare with natural climate variability?</li>
+   <li>What are the trends and seasonal cycles in regional water storage, and how have they changed over the satellite observation period?</li>
+   <li>How can uncertainty quantification methods improve our understanding of water cycle changes?</li>
    </ol></p>
- <p><strong>Contact Scientists:&nbsp;</strong>
- <ul>
- <li><strong>Dr. Cassie Nickles  (</strong><a href="mailto:Cassandra.L.Nickles@jpl.nasa.gov" target="_blank"><strong>Cassandra.L.Nickles@jpl.nasa.gov</strong></a><strong>)</strong></li>
-</ul>
-<p>
  <p><strong>Project Server (CMDA):&nbsp;</strong><a href="https://hub.jpl-cmda.org/" target="_blank"><strong>https://hub.jpl-cmda.org</strong></a></p>
  <div>
  <div contenteditable="false" data-gramm="false">
 
 </html>
-                                                                                                          
