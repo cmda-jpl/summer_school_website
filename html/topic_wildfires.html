@@ -73,14 +73,21 @@
    <li>Tools for working with SAR, optical, and burn severity data</li>
    </ul>
  </p>
- <p><strong>Geographic Focus</strong>: Eaton Fire event (Southern California)</p>
- <p><strong>Questions:</strong><ol>
-   <li>How do satellite sensors detect and map wildfire extent and boundaries?</li>
-   <li>What is the relationship between different measures of burn severity?</li>
-   <li>How can synthetic aperture radar (SAR) be used to detect land surface deformation caused by wildfires?</li>
-   <li>How do fire characteristics vary spatially across the fire perimeter?</li>
-   <li>What are the advantages and limitations of different remote sensing approaches for wildfire analysis?</li>
-   </ol></p>
+ <p><strong>Geographic Focus</strong>: Eaton Fire event (Southern California) or UAVSAR archive</p>
+ <p><strong>Project Approach:</strong></p>
+ <p>Feel free to choose your own wildfire of interest from the UAVSAR archive or use the provided Eaton Fire datasets. The provided UAVSAR HV GeoTIFFs have had RTC (radiometric terrain correction) applied and linear power units converted to decibels. You can begin by subtracting the pre-fire minus post-fire images (equivalent to dividing) and cropping the image to your selected fire(s) as there are several burn scars in this flight line. You may choose to explore generating a SAR-derived fire perimeter, burn severity map, or both. Using the Jupyter notebooks developed by previous students, you can compare other segmentation or clustering methods to improve upon the results.</p>
+ <p><strong>Analysis Workflows:</strong></p>
+ <p><strong>Fire Perimeter:</strong> <ul>
+   <li>Use crop_image.ipynb to crop the raster image by the fire perimeter</li>
+   <li>Use preprocessing_segmentation.ipynb to preprocess the cropped image and perform superpixel segmentation</li>
+   <li>Use perimeter_generation.ipynb to generate the final fire perimeter</li>
+   </ul>
+ </p>
+ <p><strong>Burn Severity:</strong> <ul>
+   <li>Use crop_image.ipynb to crop the raster image by the fire perimeter</li>
+   <li>Use burn_severity_generation.ipynb to process the SAR data and generate the burn severity map</li>
+   </ul>
+ </p>
  <p><strong>Project Server (CMDA):&nbsp;</strong><a href="https://hub.jpl-cmda.org/" target="_blank"><strong>https://hub.jpl-cmda.org</strong></a></p>
  <div>
  <div contenteditable="false" data-gramm="false">
