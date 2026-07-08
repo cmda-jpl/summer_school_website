@@ -36,3 +36,8 @@ ExpCov_SimField.png  GRACE_Map_TWS.ipynb     GRACE_NB2_GPFit_torch.ipynb      GR
 
 /home/jovyan/shared/NASA_Summer_School_2026/wildfires/materials/:
 'Background and Resources'   Data
+
+(notebook) jovyan@jupyter-goodman:~$ ls /home/jovyan/shared/NASA_Summer_School_2026/wildfires/materials/uavsar-wildfire/notebook
+burn_severity_generation.ipynb  crop_image.ipynb  gen_perim_sbs.ipynb  perimeter_generation.ipynb  preprocessing_segmentation.ipynb  weighted_inc_merge.ipynb
+
+
